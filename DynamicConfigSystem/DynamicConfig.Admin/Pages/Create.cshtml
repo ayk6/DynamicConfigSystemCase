@@ -1,0 +1,39 @@
+﻿@page
+@model DynamicConfig.Admin.Pages.CreateModel
+
+<h2>Add Configuration</h2>
+
+<form method="post">
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="ConfigItem.Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Value</label>
+        <input asp-for="ConfigItem.Value" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Type</label>
+        <input asp-for="ConfigItem.Type" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Application</label>
+        <input asp-for="ConfigItem.ApplicationName" class="form-control" />
+    </div>
+
+    <div class="form-check">
+        <input asp-for="ConfigItem.IsActive" class="form-check-input" />
+        <label asp-for="ConfigItem.IsActive" class="form-check-label"></label>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Save
+    </button>
+
+</form>
